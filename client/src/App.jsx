@@ -6,7 +6,6 @@ const App = () => {
 
   return (
     <div>
-      We're running!
       <TriviaSlides />
     </div>
   );
