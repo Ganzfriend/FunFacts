@@ -24,12 +24,12 @@ const TriviaSlides = () => {
   return (
     <MobileStepper
       variant="dots"
-      steps={6}
+      steps={7}
       position="static"
       activeStep={activeStep}
       className={classes.stepper}
       nextButton={
-        <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
+        <Button size="small" onClick={handleNext} disabled={activeStep === 6}>
           Next
           {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
         </Button>

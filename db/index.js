@@ -12,6 +12,11 @@ db.once('open', () => {
 });
 
 const triviaSchema = new mongoose.Schema({
+  groupId: Number,
+  name: String,
+  fact: String,
+  false: String,
+  image: String
 });
 
 const Trivia = mongoose.model('Trivia', triviaSchema);
