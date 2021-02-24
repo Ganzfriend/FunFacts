@@ -10,11 +10,37 @@ const useStyles = makeStyles(styles);
 
 const TriviaSlides = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = useState(0);
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
 
   return (
-    <div>
-
-    </div>
+    <MobileStepper
+      variant="dots"
+      steps={6}
+      position="static"
+      activeStep={activeStep}
+      className={classes.stepper}
+      nextButton={
+        <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
+          Next
+          {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+        </Button>
+      }
+      backButton={
+        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+          {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+          Back
+        </Button>
+      }
+    />
   );
 };
 

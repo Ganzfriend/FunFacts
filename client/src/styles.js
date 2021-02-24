@@ -1,7 +1,8 @@
 const styles = () => (
   {
-    root: {
-      color: 'black'
+    stepper: {
+      maxWidth: 400,
+      flexGrow: 1,
     }
   }
 );
