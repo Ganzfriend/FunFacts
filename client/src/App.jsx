@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
+import axios from 'axios';
 import TriviaSlides from './TriviaSlides.jsx';
 import Home from './Home.jsx';
 import styles from './styles.js';
