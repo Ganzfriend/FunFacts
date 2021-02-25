@@ -36,5 +36,4 @@ TODO:
 2. Bonus round!! ( seed dummy data for britt, teddi, angie, clare, liz, and alex ) x
 3. Add our floating animated heads to home page x
 4. Deploy on heroku
-5. background: https://data9000.s3-us-west-1.amazonaws.com/hostfaces.png
 */

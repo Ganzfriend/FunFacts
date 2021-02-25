@@ -19,7 +19,7 @@ let records = [
   {
     groupId: 0,
     name: "Randal",
-    fact: "In the navy, my nickname was Closet Nerd. I could bench 300, run a mile in 5 minutes, and out wrestle just about anyone.... but on my time off, I loved playing video games, D&D, and hanging out with all my fellow nerds!",
+    fact: "My nickname used to be Closet Nerd.",
     false: "I've been making ceramics as a hobby since I was 13.",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/randal.png"
   },
@@ -47,14 +47,14 @@ let records = [
   {
     groupId: 2,
     name: "Alec",
-    fact: "I am a Disney nerd. I love literally everything regarding Disney. Going to Disneyland is my true Happy Place",
+    fact: "I am a Disney nerd. I love literally everything regarding Disney. Going to Disneyland is my true Happy Place.",
     false: "I think socks are disgusting. You'll never catch me wearing them.",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/alec.png"
   },
   {
     groupId: 2,
     name: "Joey",
-    fact: "I’m a Nintendo collector, though I have slowed down in the last two years, I have dozens of Nintendo consoles and shelves of classic games that I don’t play enough!",
+    fact: "I’m a Nintendo collector. I have dozens of Nintendo consoles and shelves of classic games that I don’t play enough!",
     false: "I've been to Maui 6 times, but I only remember 5 of those times.",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/joey.png"
   },
