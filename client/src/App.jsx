@@ -12,15 +12,17 @@ const App = () => {
   const [clicked, setClicked] = useState(false);
 
   return (
-    <div className={classes.container}>
-      {
-        !clicked &&
-      <Home setClicked={setClicked}/>
-      }
-      {
-      clicked &&
-      <TriviaSlides />
-      }
+    <div className={classes.main}>
+      <div className={classes.container}>
+        {
+          !clicked &&
+        <Home setClicked={setClicked}/>
+        }
+        {
+        clicked &&
+        <TriviaSlides />
+        }
+      </div>
     </div>
   );
 };
@@ -30,8 +32,9 @@ export default App;
 
 /*
 TODO:
-1. Fix fact order re-render issue after clicking on a face!!
 1. Fix styling (card, answer area, stepper bar, background)
 2. Bonus round!! ( seed dummy data for britt, teddi, angie, clare, liz, and alex )
 3. Add our floating animated heads to home page
+4. Deploy on heroku
+5. background: https://data9000.s3-us-west-1.amazonaws.com/hostfaces.png
 */

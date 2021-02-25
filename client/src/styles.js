@@ -1,10 +1,18 @@
 const styles = () => (
   {
+
+    main: {
+      background: "url('https://data9000.s3-us-west-1.amazonaws.com/hostfaces.png') round fixed center",
+      backgroundSize: 30,
+      height: '100vh',
+    },
     container: {
+      backgroundColor: 'rgba(255, 255, 255, 0.7)',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      margin: '20px 100px'
+      height: '100vh',
+      margin: '20px 0'
     },
     home: {
       display: 'flex',

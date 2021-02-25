@@ -142,6 +142,39 @@ let records = [
     false: "I have 12 tattoos.",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/mike.png"
   },
+  {
+    groupId: 6,
+    name: "Pablo",
+    fact: "I had a pet monkey, his name was Sergio",
+    false: "I can grow a beard in 1 hour",
+    image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/pablo.png"
+  },
+  {
+    groupId: 7,
+    name: "Britt",
+    fact: "I love to play tetherball with the fam even though they don't like to play; I make them play with me :)",
+    false: "I was Miss Colorado in 2009",
+    image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/britt.png"
+  },
+  {
+    groupId: 7,
+    name: "Clare",
+    fact: "I am an avid skier, paddleboarder, hiker, and adventurer.",
+    image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/clare.png"
+  },
+  {
+    groupId: 7,
+    name: "Alex",
+    fact: "I lived in Madagascar, Africa while I was with the Peace Corps",
+    false: "I'm the star on a YouTube series. Not going to say which one ;)",
+    image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/alex.png"
+  },
+  {
+    groupId: 7,
+    name: "Liz",
+    fact: "I have meowed for probably more than 1000 people in my lifetime",
+    image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/teddi.png"
+  },
 ]
 
 Trivia.create(records)
