@@ -91,7 +91,7 @@ export default function TriviaSlides() {
             src={selected.image}
             alt={selected.name}
           />
-          {selected.fact}
+          <Typography variant="h4">{selected.fact}</Typography>
         </div>
       }
     </div>

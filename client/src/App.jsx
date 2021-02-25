@@ -26,3 +26,11 @@ const App = () => {
 };
 
 export default App;
+
+
+/*
+TODO:
+1. Fix styling (card, answer area, stepper bar, background)
+2. Bonus round!! ( seed dummy data for britt, teddi, angie, clare, liz, and alex )
+3. Add our floating animated heads to home page
+*/
