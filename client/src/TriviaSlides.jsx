@@ -15,7 +15,7 @@ export default function TriviaSlides() {
   const [trivia, setTrivia] = useState([]);
   const [selected, setSelected] = useState(null);
   const [random, setRandom] = useState([]);
-  const maxSteps = 7;
+  const maxSteps = 9;
 
   const randomize = () => {
     let facts = [];
