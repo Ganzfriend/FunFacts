@@ -7,12 +7,12 @@ const styles = () => (
       height: '100vh',
     },
     container: {
+      padding: 50,
       backgroundColor: 'rgba(255, 255, 255, 0.7)',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      height: '100vh',
-      margin: '20px 0'
+      height: '90vh',
     },
     home: {
       display: 'flex',
@@ -34,7 +34,7 @@ const styles = () => (
       gridGap: 150
     },
     stepper: {
-      width: 200
+      width: 250
     },
     facts: {
       padding: 30,
@@ -46,14 +46,22 @@ const styles = () => (
     faces: {
       display: 'grid',
       gridTemplateColumns: '1fr 1fr 1fr',
-      gridGap: 100,
+      gridGap: 50,
       marginTop: 50,
       width: '50vw'
     },
     img: {
       height: 255,
+      maxWidth: '50vw',
       display: 'block'
     },
+    selected: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: 100
+    }
   }
 );
 

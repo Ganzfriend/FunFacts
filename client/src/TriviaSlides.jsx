@@ -81,13 +81,14 @@ export default function TriviaSlides() {
         selected &&
         <div
           onClick={() => setSelected(null)}
+          className={classes.selected}
         >
           <img
             className={classes.img}
             src={selected.image}
             alt={selected.name}
           />
-          <Typography variant="h4">{selected.fact}</Typography>
+          <Typography variant="h3">{selected.fact}</Typography>
         </div>
       }
       <MobileStepper
