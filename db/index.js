@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 /* change uri to mongo atlas */
-const uri = 'mongodb://localhost/fun-facts';
+const uri = 'mongodb+srv://mongo:mongo@trivia.x6f5x.mongodb.net/fun-facts?retryWrites=true&w=majority';
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
