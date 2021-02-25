@@ -8,9 +8,8 @@
   "license": "ISC",
   "scripts": {
     "start": "node server/index.js",
-    "seed": "node ./db/seed.js",
+    "postinstall": "node ./db/seed.js",
     "clean": "rm public/bundle.js",
-    "watch": "webpack --mode development -w",
     "build": "webpack --mode production"
   },
   "dependencies": {

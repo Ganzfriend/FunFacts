@@ -34,7 +34,7 @@ export default function TriviaSlides() {
   };
 
   const getTriviaData = () => {
-    axios.get(`http://localhost:3000/api/facts/${activeStep}`)
+    axios.get(`/api/facts/${activeStep}`)
       .then(result => setTrivia(result.data))
       .catch(err => console.log(err));
   };
