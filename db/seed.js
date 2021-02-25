@@ -117,7 +117,7 @@ let records = [
   {
     groupId: 5,
     name: "Thomas",
-    fact: "I was a 'pro' poker player for about a year (though I was only making about 12 dollars an hour at our local casinos in Blackhawk).",
+    fact: "I was a 'pro' poker player for about a year, (making about $12/hr).",
     false: "I have sung on stage with Nickelback!",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/thomas.png"
   },
