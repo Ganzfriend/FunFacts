@@ -12,25 +12,35 @@ const styles = () => (
       alignItems: 'center',
       marginTop: 250
     },
+    triviaContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      height: '80vh'
+    },
     triviaSlides: {
       flexGrow: 1,
       display: 'grid',
-      gridTemplateColumns: 'auto 1fr',
-      gridGap: 200
+      gridTemplateColumns: '1fr 1fr',
+      gridGap: 150
+    },
+    stepper: {
+      width: 200
     },
     facts: {
-      marginTop: 50,
       padding: 30,
-      width: '30vw'
+      width: '35vw'
     },
     fact: {
       padding: 10
     },
     faces: {
       display: 'grid',
-      gridTemplateColumns: '1fr auto auto',
+      gridTemplateColumns: '1fr 1fr 1fr',
       gridGap: 100,
-      marginTop: 50
+      marginTop: 50,
+      width: '50vw'
     },
     img: {
       height: 255,

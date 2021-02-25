@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import MobileStepper from '@material-ui/core/MobileStepper';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import {Paper, Typography, Button, MobileStepper, Slide} from '@material-ui/core';
+import {KeyboardArrowLeft, KeyboardArrowRight} from '@material-ui/icons';
 import styles from './styles.js';
 import Facts from './Facts.jsx';
 
@@ -55,25 +51,7 @@ export default function TriviaSlides() {
   useEffect(() => randomize(), [trivia]);
 
   return (
-    <div>
-      <MobileStepper
-        steps={maxSteps}
-        position="static"
-        variant="dots"
-        activeStep={activeStep}
-        nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
-            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-          </Button>
-        }
-        backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            Back
-          </Button>
-        }
-      />
+    <div className={classes.triviaContainer}>
       {
         !!trivia.length && !selected &&
       <div className={classes.triviaSlides}>
@@ -112,6 +90,25 @@ export default function TriviaSlides() {
           <Typography variant="h4">{selected.fact}</Typography>
         </div>
       }
+      <MobileStepper
+        steps={maxSteps}
+        position="static"
+        variant="dots"
+        activeStep={activeStep}
+        classes={{root: classes.stepper}}
+        nextButton={
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+            Next
+            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+          </Button>
+        }
+        backButton={
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+            Back
+          </Button>
+        }
+      />
     </div>
   );
 }

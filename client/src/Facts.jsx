@@ -16,6 +16,7 @@ const Facts = ({random}) => {
           key={i}
           className={classes.fact}
           gutterBottom
+          variant="h6"
         >
           {i+1}. {fact}
         </Typography>
