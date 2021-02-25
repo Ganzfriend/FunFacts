@@ -9,23 +9,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import styles from './styles.js';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 400,
-    flexGrow: 1,
-  },
-  header: {
-    display: 'flex',
-    alignItems: 'center',
-    height: 50,
-    paddingLeft: theme.spacing(4),
-    backgroundColor: theme.palette.background.default,
-  },
-  img: {
-    height: 255,
-    display: 'block',
-  },
-}));
+const useStyles = makeStyles(styles);
 
 export default function TriviaSlides() {
   const classes = useStyles();
@@ -51,42 +35,47 @@ export default function TriviaSlides() {
   useEffect(() => getTriviaData(), [activeStep]);
 
   return (
-    <div className={classes.root}>
+    <div>
       {
         trivia.length &&
-      <div>
-        {
-          trivia.map(person => (
-            <div>
-              <img
-                className={classes.img}
-                src={person.image}
-                alt={person.name}
-              />
-              <Typography variant="h4">{person.name}</Typography>
-            </div>
-          ))
-        }
-        <MobileStepper
-          steps={maxSteps}
-          position="static"
-          variant="dots"
-          activeStep={activeStep}
-          nextButton={
-            <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-              Next
-              {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-            </Button>
+      <div className={classes.triviaSlides}>
+        <div className={classes.facts}>
+          <Typography>Facts here!</Typography>
+        </div>
+        <div className={classes.faces}>
+          {
+            trivia.map(person => (
+              <div key={person._id}>
+                <img
+                  className={classes.img}
+                  src={person.image}
+                  alt={person.name}
+                />
+                <Typography variant="h4">{person.name}</Typography>
+              </div>
+            ))
           }
-          backButton={
-            <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-              {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-              Back
-            </Button>
-          }
-        />
+        </div>
       </div>
       }
+      <MobileStepper
+        steps={maxSteps}
+        position="static"
+        variant="dots"
+        activeStep={activeStep}
+        nextButton={
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+            Next
+            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+          </Button>
+        }
+        backButton={
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+            Back
+          </Button>
+        }
+      />
     </div>
   );
 }

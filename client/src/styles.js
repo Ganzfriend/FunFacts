@@ -5,10 +5,16 @@ const styles = () => (
       flexDirection: 'column',
       alignItems: 'center'
     },
-    stepper: {
-      maxWidth: 400,
+    triviaSlides: {
       flexGrow: 1,
-    }
+      display: 'grid',
+      gridTemplateColumns: '1fr auto',
+      gridGap: 300
+    },
+    img: {
+      height: 255,
+      display: 'block',
+    },
   }
 );
 
