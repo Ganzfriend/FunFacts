@@ -41,7 +41,7 @@ let records = [
     groupId: 1,
     name: "Chris M.",
     fact: "I've been to Antarctica!",
-    false: "I spent most of my 11th birthday in the Diseny World jail.",
+    false: "I spent most of my 11th birthday in the Disney World jail.",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/chrism.png"
   },
   {

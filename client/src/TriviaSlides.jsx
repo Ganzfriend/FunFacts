@@ -18,7 +18,24 @@ export default function TriviaSlides() {
   const [activeStep, setActiveStep] = useState(0);
   const [trivia, setTrivia] = useState([]);
   const [selected, setSelected] = useState(null);
+  const [random, setRandom] = useState([]);
   const maxSteps = 7;
+
+  const randomize = () => {
+    let facts = [];
+    trivia.map(person => {
+      facts.push(person.fact);
+      facts.push(person.false);
+    })
+
+    let randomized = [];
+    while (facts.length > 0) {
+      let index = Math.floor(Math.random() * facts.length);
+      randomized.push(facts[index]);
+      facts.splice(index, 1);
+    }
+    setRandom(randomized);
+  };
 
   const getTriviaData = () => {
     axios.get(`http://localhost:3000/api/facts/${activeStep}`)
@@ -35,6 +52,7 @@ export default function TriviaSlides() {
   };
 
   useEffect(() => getTriviaData(), [activeStep]);
+  useEffect(() => randomize(), [trivia]);
 
   return (
     <div>
@@ -57,10 +75,10 @@ export default function TriviaSlides() {
         }
       />
       {
-        trivia.length && !selected &&
+        !!trivia.length && !selected &&
       <div className={classes.triviaSlides}>
         <div className={classes.facts}>
-          <Facts trivia={trivia} />
+          <Facts random={random} />
         </div>
         <div className={classes.faces}>
           {
