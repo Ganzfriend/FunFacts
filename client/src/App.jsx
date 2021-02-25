@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Button } from '@material-ui/core';
 import axios from 'axios';
 import TriviaSlides from './TriviaSlides.jsx';
 import Home from './Home.jsx';
@@ -14,10 +13,10 @@ const App = () => {
 
   return (
     <div className={classes.container}>
-      <Home />
-      <Button onClick={() => setClicked(!clicked)}>
-        Let's Play!
-      </Button>
+      {
+        !clicked &&
+      <Home setClicked={setClicked}/>
+      }
       {
       clicked &&
       <TriviaSlides />

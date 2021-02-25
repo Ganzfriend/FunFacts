@@ -154,3 +154,16 @@ Trivia.create(records)
   mongoose.connection.close();
 });
 
+
+
+/*
+
+Randal - This person has traveled around the world the last 20 years and can run 1 mile in under 5 minutes!!
+
+Eric - this person is becoming a whiskey collector and has a Kawasaki motorcycle.
+
+Collin - this person has jumped out of a plane and was an instructor back in high school.
+
+Chuck - this person loves to run, loves cooking, and bake & has a favorite American rock band who was up and coming in the 1960’s.
+
+*/

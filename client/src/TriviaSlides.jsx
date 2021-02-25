@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import styles from './styles.js';
+import Facts from './Facts.jsx';
 
 const useStyles = makeStyles(styles);
 
@@ -36,28 +37,6 @@ export default function TriviaSlides() {
 
   return (
     <div>
-      {
-        trivia.length &&
-      <div className={classes.triviaSlides}>
-        <div className={classes.facts}>
-          <Typography>Facts here!</Typography>
-        </div>
-        <div className={classes.faces}>
-          {
-            trivia.map(person => (
-              <div key={person._id}>
-                <img
-                  className={classes.img}
-                  src={person.image}
-                  alt={person.name}
-                />
-                <Typography variant="h4">{person.name}</Typography>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-      }
       <MobileStepper
         steps={maxSteps}
         position="static"
@@ -76,6 +55,29 @@ export default function TriviaSlides() {
           </Button>
         }
       />
+      {
+        trivia.length &&
+      <div className={classes.triviaSlides}>
+        <div className={classes.facts}>
+          <Typography>Facts here!</Typography>
+          <Facts trivia={trivia}/>
+        </div>
+        <div className={classes.faces}>
+          {
+            trivia.map(person => (
+              <div key={person._id}>
+                <img
+                  className={classes.img}
+                  src={person.image}
+                  alt={person.name}
+                />
+                <Typography variant="h4">{person.name}</Typography>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      }
     </div>
   );
 }
