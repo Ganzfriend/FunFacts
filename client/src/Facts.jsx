@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {Typography, Card} from '@material-ui/core';
 import styles from './styles.js';
 
 const useStyles = makeStyles(styles);
@@ -12,8 +13,8 @@ const Facts = ({trivia}) => {
   const randomize = () => {
     let facts = [];
     trivia.map((person)=> {
-      facts.push(person.fact);
-      facts.push(person.false);
+      facts.push({fact: person.fact, name: person.name});
+      facts.push({fact: person.false});
     })
 
     let randomized = [];
@@ -27,16 +28,16 @@ const Facts = ({trivia}) => {
     setRandom(randomized);
   };
 
-  useEffect(() => randomize(), []);
+  useEffect(() => randomize(), [trivia]);
 
   return (
-    <div className={classes.facts}>
+    <Card className={classes.facts}>
     { random &&
       random.map((fact, i) => (
-        <div key={i}>{i+1}. {fact}</div>
+        <Typography key={i} className={classes.fact}>{i+1}. {fact.fact}</Typography>
       ))
     }
-    </div>
+    </Card>
   );
 };
 

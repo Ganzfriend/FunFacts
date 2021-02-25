@@ -15,11 +15,16 @@ const styles = () => (
     triviaSlides: {
       flexGrow: 1,
       display: 'grid',
-      gridTemplateColumns: '1fr auto',
-      gridGap: 300
+      gridTemplateColumns: 'auto 1fr',
+      gridGap: 200
     },
     facts: {
-      marginTop: 50
+      marginTop: 50,
+      padding: 30,
+      width: '30vw'
+    },
+    fact: {
+      padding: 10
     },
     faces: {
       display: 'grid',

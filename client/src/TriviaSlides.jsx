@@ -17,6 +17,7 @@ export default function TriviaSlides() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
   const [trivia, setTrivia] = useState([]);
+  const [selected, setSelected] = useState(null);
   const maxSteps = 7;
 
   const getTriviaData = () => {
@@ -56,16 +57,18 @@ export default function TriviaSlides() {
         }
       />
       {
-        trivia.length &&
+        trivia.length && !selected &&
       <div className={classes.triviaSlides}>
         <div className={classes.facts}>
-          <Typography>Facts here!</Typography>
-          <Facts trivia={trivia}/>
+          <Facts trivia={trivia} />
         </div>
         <div className={classes.faces}>
           {
             trivia.map(person => (
-              <div key={person._id}>
+              <div
+                key={person._id}
+                onClick={() => setSelected(person)}
+              >
                 <img
                   className={classes.img}
                   src={person.image}
@@ -77,6 +80,19 @@ export default function TriviaSlides() {
           }
         </div>
       </div>
+      }
+      {
+        selected &&
+        <div
+          onClick={() => setSelected(null)}
+        >
+          <img
+            className={classes.img}
+            src={selected.image}
+            alt={selected.name}
+          />
+          {selected.fact}
+        </div>
       }
     </div>
   );
