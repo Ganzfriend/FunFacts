@@ -193,10 +193,14 @@ let records = [
   },
 ]
 
-Trivia.create(records)
-.then((results)=> {
-  console.log('seeding complete');
-  mongoose.connection.close();
+Trivia.remove({})
+.then(() => {
+  Trivia.create(records)
+  .then((results)=> {
+    console.log('seeding complete');
+    mongoose.connection.close();
+  })
+  .catch(err => err)
 })
 .catch((err)=> {
   console.log(err)
