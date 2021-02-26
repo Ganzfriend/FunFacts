@@ -15,7 +15,7 @@ export default function TriviaSlides() {
   const [trivia, setTrivia] = useState([]);
   const [selected, setSelected] = useState(null);
   const [random, setRandom] = useState([]);
-  const maxSteps = 9;
+  const maxSteps = 11;
 
   const randomize = () => {
     let facts = [];
@@ -55,9 +55,14 @@ export default function TriviaSlides() {
       {
         !!trivia.length && !selected &&
       <div className={classes.triviaSlides}>
+        {
+        !!random[0] ?
         <div className={classes.facts}>
           <Facts random={random} />
         </div>
+        :
+        <div></div>
+        }
         <div className={classes.faces}>
           {
             trivia.map(person => (

@@ -151,45 +151,53 @@ let records = [
   },
   {
     groupId: 7,
+    image: "https://faces2021.s3-us-west-1.amazonaws.com/bonus.png"
+  },
+  {
+    groupId: 8,
     name: "Britt",
     fact: "I love to play tetherball with the fam even though they don't like to play; I make them play with me :)",
     false: "I was Miss Colorado in 2009.",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/britt.png"
   },
   {
-    groupId: 7,
+    groupId: 8,
     name: "Clare",
     fact: "I am an avid skier, paddleboarder, hiker, and adventurer.",
     false: "My great great great great great great grandfather's face is engrained in Mount Rushmore.",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/clare.png"
   },
   {
-    groupId: 7,
+    groupId: 8,
     name: "Liz",
     fact: "I have meowed for probably more than 1000 people in my lifetime.",
     false: "I'm the star on a YouTube series. Not going to say which one ;)",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/liz.png"
   },
   {
-    groupId: 8,
+    groupId: 9,
     name: "Alex",
     fact: "I lived in Madagascar, Africa while I was with the Peace Corps.",
     false: "I have a pet iguana who I sometimes find in my fridge.",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/alex.png"
   },
   {
-    groupId: 8,
+    groupId: 9,
     name: "Angie",
     fact: "A pre-covid hobby of mine was/is country 2-step dancing; I would go three times a week!",
     false: "I've owned 4 hamsters in my lifetime, and have given them all the same name.",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/angie.png"
   },
   {
-    groupId: 8,
+    groupId: 9,
     name: "Teddi",
     fact: "My most recent PRs (personal records) are 305lbs for hex bar deadlift and 235lbs for a box squat.",
     false: "The name you all know me by is not my real name.",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/teddi.png"
+  },
+  {
+    groupId: 10,
+    image: "https://faces2021.s3-us-west-1.amazonaws.com/thanks.png"
   },
 ]
 
