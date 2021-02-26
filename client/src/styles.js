@@ -31,10 +31,10 @@ const styles = () => (
       flexGrow: 1,
       display: 'grid',
       gridTemplateColumns: '1fr 1fr',
-      gridGap: 150
+      gridGap: 50
     },
     stepper: {
-      width: 250
+      width: 300
     },
     facts: {
       padding: 30,
@@ -50,6 +50,10 @@ const styles = () => (
       marginTop: 50,
       width: '50vw'
     },
+    faceBtn: {
+      height: '50%',
+      marginBottom: 20
+    },
     img: {
       height: 255,
       maxWidth: '50vw',
@@ -58,7 +62,7 @@ const styles = () => (
     selected: {
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center',
+      justifyContent: 'space-around',
       alignItems: 'center',
       padding: 100
     }

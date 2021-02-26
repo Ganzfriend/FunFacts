@@ -12,7 +12,7 @@ const Home = ({setClicked}) => {
   return (
     <div className={classes.home}>
       <Typography variant="h1" gutterBottom> co_1409 f@Ct$ </Typography>
-      <Button onClick={() => setClicked(true)} variant="contained">
+      <Button onClick={() => setClicked(true)} variant="contained" >
         Let's Play!
       </Button>
     </div>

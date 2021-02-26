@@ -61,15 +61,19 @@ export default function TriviaSlides() {
         <div className={classes.faces}>
           {
             trivia.map(person => (
-              <div
-                key={person._id}
-                onClick={() => setSelected(person)}
-              >
-                <img
-                  className={classes.img}
-                  src={person.image}
-                  alt={person.name}
-                />
+              <div>
+                <Button
+                  key={person._id}
+                  onClick={() => setSelected(person)}
+                  classes={{root: classes.faceBtn}}
+                >
+                  <img
+                    className={classes.img}
+                    src={person.image}
+                    alt={person.name}
+                  />
+                </Button>
+                <br />
                 <Typography variant="h4">{person.name}</Typography>
               </div>
             ))
@@ -79,15 +83,18 @@ export default function TriviaSlides() {
       }
       {
         selected &&
-        <div
-          onClick={() => setSelected(null)}
-          className={classes.selected}
-        >
-          <img
-            className={classes.img}
-            src={selected.image}
-            alt={selected.name}
-          />
+        <div className={classes.selected}>
+          <Button
+            onClick={() => setSelected(null)}
+            className={classes.faceBtn}
+          >
+            <img
+              className={classes.img}
+              src={selected.image}
+              alt={selected.name}
+            />
+          </Button>
+          <br />
           <Typography variant="h3">{selected.fact}</Typography>
         </div>
       }

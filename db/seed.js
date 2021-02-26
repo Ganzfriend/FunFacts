@@ -82,7 +82,7 @@ let records = [
   {
     groupId: 3,
     name: "Melissa",
-    fact: "I'm a big fan of making weird sounds (e.g. mouth trumpet, collarbone farts, hand whistle, amateur beatboxing).",
+    fact: "I can make my eyeballs shake/vibrate (voluntary nystagmus).",
     false: "I own a water bottle bigger than Joey's.",
     image: "https://faces2021.s3-us-west-1.amazonaws.com/faces/melissa.png"
   },
